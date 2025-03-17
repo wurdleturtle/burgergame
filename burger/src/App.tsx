@@ -1,10 +1,17 @@
 import './App.css';
+import ActivePlayers from './components/ActivePlayers';
+import UpgradesMain from './components/UpgradesMain';
 
 function App() {
   return (
     <>
       {' '}
-      <h1> Burger or something... I dunno. </h1>
+      <div className="ActivePlayers">
+        <ActivePlayers />
+      </div>
+      <div className="UpgradesMain">
+        <UpgradesMain />
+      </div>
     </>
   );
 }

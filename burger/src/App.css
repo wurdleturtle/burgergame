@@ -1,0 +1,71 @@
+html,
+#root {
+  font-family: mc;
+  background-color: rgb(43, 43, 43);
+}
+
+.textgapsmall {
+  line-height: 3px;
+}
+
+.ActivePlayers {
+  position: absolute;
+  left: 2%;
+  top: 40%;
+  font-size: 120%;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 10px;
+  outline: 2px solid #414141;
+}
+
+.UpgradesMain {
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 120%;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 10px;
+  outline: 2px solid #414141;
+  width: 25%;
+  text-align: center;
+}
+
+.UpgradeSelection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 10px;
+  padding: 10px;
+  background-color: #585858;
+  border: 2px solid #414141;
+  color: white;
+  width: 100%;
+  height: 100px;
+}
+
+.UpgradeSelection:active {
+  transform: scale(0.97);
+  transition: transform 0.05s ease-in-out;
+}
+
+.UpgradeSelection:hover {
+  background-color: #6d6d6d;
+}
+
+.UpgradeSelection img {
+  width: 50px;
+}
+
+.UpgradeSelection h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: mc;
+  src: url(https://images.wurdle.eu/minecraft.ttf) format('truetype');
+  cross-origin: anonymous;
+}
