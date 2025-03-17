@@ -1,44 +1,17 @@
-import { useState, useEffect } from 'react';
-import UpgradeButton from './UpgradePages/UpgradeButton';
-import { fetchData } from '../api'; // Assuming you have the fetchData function
+import { useState } from 'react';
+import MainUpgradePage from './UpgradePages/MainUpgradePage';
+import BurgerBunTop from './UpgradePages/Pages/BurgerBunTop';
+import PattyUpgrade from './UpgradePages/Pages/Patty';
+import BurgerBunBottom from './UpgradePages/Pages/BurgerBunBottom';
 
 const UpgradesMain = () => {
-  const [firstButtonText, setFirstButtonText] = useState<string | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const getUpgradeText = async () => {
-      try {
-        const data = await fetchData(); // Assuming this returns the necessary text for the first button
-        setFirstButtonText(data.firstUpgradeText); // Set the fetched text here
-        setLoading(false);
-      } catch (err) {
-        setError('Failed to fetch data');
-        setLoading(false);
-      }
-    };
-
-    getUpgradeText();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
-
+  const [Page, setPage] = useState('main');
   return (
     <>
-      <h1>Upgrades</h1>
-      <UpgradeButton
-        image="burgerbuntop"
-        text={firstButtonText || 'Default Text for First Button'} // Default text as fallback
-      />
-      <UpgradeButton image="patty" text="Burger Patty Upgrades" />
-      <UpgradeButton
-        image="burgerbunbottom"
-        text="Burger Bottom Bun Upgrades"
-      />
-      <UpgradeButton image="balatro" text="Place Holder Upgrade Text" />
-      <UpgradeButton image="balatro" text="Place Holder Upgrade Text" />
+      {Page === 'main' && <MainUpgradePage setUpgradePage={setPage} />}
+      {Page === 'burgerbuntop' && <BurgerBunTop Page={setPage} />}
+      {Page === 'patty' && <PattyUpgrade Page={setPage} />}
+      {Page === 'burgerbunbottom' && <BurgerBunBottom Page={setPage} />}
     </>
   );
 };
