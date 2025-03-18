@@ -2,6 +2,7 @@ html,
 #root {
   font-family: mc;
   background-color: rgb(43, 43, 43);
+  color: white;
 }
 
 .textgapsmall {
@@ -66,8 +67,24 @@ html,
   font-size: 20px;
 }
 
+.gone {
+  opacity: 0;
+}
+
 @font-face {
   font-family: mc;
   src: url(https://images.wurdle.eu/minecraft.ttf) format('truetype');
   cross-origin: anonymous;
+}
+
+.Chat {
+  position: absolute;
+  left: 2%;
+  top: 62%;
+  font-size: 120%;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 10px;
+  outline: 2px solid #414141;
+  width: 25%;
 }

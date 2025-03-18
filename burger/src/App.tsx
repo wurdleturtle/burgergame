@@ -1,5 +1,6 @@
 import './App.css';
 import ActivePlayers from './components/ActivePlayers';
+import Chat from './components/Chat';
 import UpgradesMain from './components/UpgradesMain';
 
 function App() {
@@ -11,6 +12,9 @@ function App() {
       </div>
       <div className="UpgradesMain">
         <UpgradesMain />
+      </div>
+      <div className="Chat">
+        <Chat />
       </div>
     </>
   );
