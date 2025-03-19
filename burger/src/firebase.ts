@@ -11,12 +11,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyD_W1GSecwiwRZBglZ_1v-wE4c5MYo8zFQ',
-  authDomain: 'burgerwurdleeu.firebaseapp.com',
-  projectId: 'burgerwurdleeu',
-  storageBucket: 'burgerwurdleeu.firebasestorage.app',
-  messagingSenderId: '945085119966',
-  appId: '1:945085119966:web:946b3e6e644a81d706714f',
+  apiKey: 'nuh uh',
+  authDomain: 'nuh uh',
+  projectId: 'nuh uh',
+  storageBucket: 'nuh uh',
+  messagingSenderId: 'nuh uh',
+  appId: 'nuh uh',
 };
 
 // Initialize Firebase
