@@ -12,8 +12,8 @@ const BurgerBunTop = ({ Page }: Props) => {
       <BackButton page={Page} />
       <UpgradeButton
         image="zilver"
-        text="Stronger Clicks"
-        desc="Provides Stronger Clicks"
+        text="Strong Clicks"
+        desc="Provides Strong Clicks"
         price={100}
         upgrade={1}
       />
@@ -25,14 +25,14 @@ const BurgerBunTop = ({ Page }: Props) => {
       />
       <UpgradeButton
         image="zilver"
-        text="Stronger Clicks"
-        desc="Provides Stronger Clicks"
+        text="Strongerer Clicks"
+        desc="Provides Strongerer Clicks"
         price={100}
       />
       <UpgradeButton
         image="pipari"
-        text="Stronger Clicks"
-        desc="Provides Stronger Clicks"
+        text="Strongererer Clicks"
+        desc="Provides Strongererer Clicks"
         price={100}
       />
     </>

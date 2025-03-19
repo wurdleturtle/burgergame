@@ -2,13 +2,15 @@ import UpgradeButtonSelect from './UpgradeButtonSelect';
 
 interface Props {
   setUpgradePage: (page: string) => void;
+  money: number;
 }
 
-const MainUpgradePage = ({ setUpgradePage }: Props) => {
+const MainUpgradePage = ({ setUpgradePage, money }: Props) => {
   return (
     <>
       {' '}
       <h1>Upgrades</h1>
+      <p style={{ color: 'green' }}>${money}</p>
       <UpgradeButtonSelect
         page="burgerbuntop"
         updatePage={setUpgradePage}
@@ -28,16 +30,17 @@ const MainUpgradePage = ({ setUpgradePage }: Props) => {
         text="Burger Bottom Bun Upgrades"
       />
       <UpgradeButtonSelect
-        page="test"
+        page="burger"
         updatePage={setUpgradePage}
-        image="balatro"
-        text="Place Holder Upgrade Text"
+        image="burger"
+        text="Burger Construction Upgrades"
+        height="100px"
       />
       <UpgradeButtonSelect
-        page="test"
+        page="cash"
         updatePage={setUpgradePage}
-        image="balatro"
-        text="Place Holder Upgrade Text"
+        image="burgermoney"
+        text="Burger Selling Upgrades"
       />{' '}
     </>
   );
